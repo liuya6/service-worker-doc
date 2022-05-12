@@ -1,0 +1,660 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2 本地存储管理 · service-admin-doc</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="harlan">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3-respond-strategy.html" />
+    
+    
+    <link rel="prev" href="1-fetch-event-management.html" />
+    
+
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"liuya6","repo":"h5-sdk-has-pwa","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../serviceWorker/">
+            
+                <a href="../serviceWorker/">
+            
+                    
+                    Service Worker教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../serviceWorker/1-service-worker-introduction.html">
+            
+                <a href="../serviceWorker/1-service-worker-introduction.html">
+            
+                    
+                    1 Service Worker 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../serviceWorker/2-service-worker-register.html">
+            
+                <a href="../serviceWorker/2-service-worker-register.html">
+            
+                    
+                    2 Service Worker 注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../serviceWorker/3-service-worker-dive.html">
+            
+                <a href="../serviceWorker/3-service-worker-dive.html">
+            
+                    
+                    3 Service Worker 工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../serviceWorker/4-service-worker-debug.html">
+            
+                <a href="../serviceWorker/4-service-worker-debug.html">
+            
+                    
+                    4 Service Worker 调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    离线与缓存
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1-fetch-event-management.html">
+            
+                <a href="1-fetch-event-management.html">
+            
+                    
+                    1 资源请求的拦截代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="2-local-storage-management.html">
+            
+                <a href="2-local-storage-management.html">
+            
+                    
+                    2 本地存储管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3-respond-strategy.html">
+            
+                <a href="3-respond-strategy.html">
+            
+                    
+                    3 资源请求响应策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4-precache.html">
+            
+                <a href="4-precache.html">
+            
+                    
+                    4 预缓存方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5-workbox.html">
+            
+                <a href="5-workbox.html">
+            
+                    
+                    5 使用 Workbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../workBox/">
+            
+                <a href="../workBox/">
+            
+                    
+                    深入workBox
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../workBox/tutorial/">
+            
+                <a href="../workBox/tutorial/">
+            
+                    
+                    1 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../workBox/problem/">
+            
+                <a href="../workBox/problem/">
+            
+                    
+                    2 问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2 本地存储管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;"><b></b>&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#cache-api-&#x4E0E;-indexeddb-&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;"><b></b>Cache API &#x4E0E; IndexedDB &#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><b></b>&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></li><ul><li><span class="title-icon "></span><a href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;"><b></b>&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;</a></li><li><span class="title-icon "></span><a href="#&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;"><b></b>&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;</a></li><li><span class="title-icon "></span><a href="#&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;"><b></b>&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;"><b></b>&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6784;&#x9020;&#x51FD;&#x6570;"><b></b>&#x6784;&#x9020;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;-cache-&#x548C;-db-&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;"><b></b>&#x83B7;&#x53D6; cache &#x548C; db &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;"><b></b>&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;"><b></b>&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;</a></li><li><span class="title-icon "></span><a href="#&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;"><b></b>&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#&#x5229;&#x7528;-cachewrapper-&#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;"><b></b>&#x5229;&#x7528; CacheWrapper &#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;</a></li></ul></ul></ul></div><a href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;"><a name="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7BA1;&#x7406;</h1>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x89E3;&#x51B3;&#x4E86;&#x5982;&#x4F55;&#x5BF9;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x4EE3;&#x7406;&#x4E4B;&#x540E;&#xFF0C;&#x8981;&#x5B9E;&#x73B0;&#x7F51;&#x9875;&#x7684;&#x79BB;&#x7EBF;&#x7F13;&#x5B58;&#x8FD8;&#x9700;&#x8981;&#x89E3;&#x51B3;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x9009;&#x62E9;&#x4E0E;&#x7BA1;&#x7406;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4ECE;&#x524D;&#x9762;&#x5B66;&#x4E60;&#x4E2D;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x5904;&#x4E8E;&#x540C;&#x4E00;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;&#x7F51;&#x9875;&#x4F1A;&#x5171;&#x7528;&#x4E00;&#x4E2A; Service Worker &#x7EBF;&#x7A0B;&#xFF0C;&#x8FD9;&#x4E2A; Service Worker &#x4F1A;&#x540C;&#x65F6;&#x5904;&#x7406;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x9875;&#x9762;&#x7684;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x7684;&#x62E6;&#x622A;&#x548C;&#x54CD;&#x5E94;&#xFF0C;&#x56E0;&#x6B64;&#x57FA;&#x4E8E;&#x6027;&#x80FD;&#x4E0A;&#x7684;&#x8003;&#x8651;&#xFF0C;Service Worker &#x5728;&#x8BBE;&#x8BA1;&#x6807;&#x51C6;&#x65F6;&#x5C31;&#x8981;&#x6C42;&#x4E86;&#x4EFB;&#x4F55;&#x8017;&#x65F6;&#x64CD;&#x4F5C;&#x90FD;&#x5FC5;&#x987B;&#x5F02;&#x6B65;&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x4E5F;&#x5C31;&#x5BFC;&#x81F4;&#x4E86;&#x5728; Service Worker &#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x7684;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#x53EA;&#x6709; Cache API &#x548C; IndexedDB&#xFF0C;&#x56E0;&#x4E3A;&#x76EE;&#x524D;&#x53EA;&#x6709;&#x4E8C;&#x8005;&#x5728;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x4E0A;&#x5168;&#x90E8;&#x91C7;&#x7528;&#x4E86;&#x5F02;&#x6B65;&#x5F62;&#x5F0F;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x8BF8;&#x5982; localStorage &#x5C5E;&#x4E8E;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x6CD5;&#x5728; Service Worker &#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x5173;&#x4E8E; Cache API &#x548C; IndexedDB &#x5728;&#x7B2C;&#x4E09;&#x7AE0;&#x57FA;&#x7840;&#x6280;&#x672F;&#x7684;&#x7B80;&#x4ECB;&#x5F53;&#x4E2D;&#x5DF2;&#x7ECF;&#x505A;&#x4E86;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF0C;&#x56E0;&#x6B64;&#x672C;&#x8282;&#x7684;&#x91CD;&#x70B9;&#x5C06;&#x4E3B;&#x8981;&#x653E;&#x5728;&#x4E8C;&#x8005;&#x7684;&#x5BF9;&#x6BD4;&#xFF0C;&#x5206;&#x6790;&#x4E8C;&#x8005;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x9700;&#x8981;&#x5173;&#x5FC3;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x7B49;&#x65B9;&#x9762;&#xFF0C;&#x5E76;&#x5728;&#x6700;&#x540E;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x7ED3;&#x5408;&#x4E24;&#x79CD;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x79BB;&#x7EBF;&#x7F13;&#x5B58;&#x7684;&#x3002;</p>
+<h2 id="cache-api-&#x4E0E;-indexeddb-&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;"><a name="cache-api-&#x4E0E;-indexeddb-&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#cache-api-&#x4E0E;-indexeddb-&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="cache-api-&#x4E0E;-indexeddb-&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;" class="plugin-anchor" href="#cache-api-&#x4E0E;-indexeddb-&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>Cache API &#x4E0E; IndexedDB &#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</h2>
+<p>Cache API &#x662F;&#x4E3A;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x4E0E;&#x54CD;&#x5E94;&#x7684;&#x5B58;&#x50A8;&#x91CF;&#x8EAB;&#x5B9A;&#x505A;&#x7684;&#xFF0C;&#x5B83;&#x91C7;&#x7528;&#x4E86;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF0C;&#x4EE5;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#x4E3A;&#x952E;&#x3001;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#x4E3A;&#x503C;&#xFF0C;&#x6B63;&#x597D;&#x5BF9;&#x5E94;&#x4E86;&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x65F6;&#x8BF7;&#x6C42;&#x4E0E;&#x54CD;&#x5E94;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x56E0;&#x6B64; Cache API &#x9002;&#x7528;&#x4E8E;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x7684;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x3002;</p>
+<p>IndexedDB &#x5219;&#x662F;&#x4E00;&#x79CD;&#x975E;&#x5173;&#x7CFB;&#x578B;&#xFF08;NoSQL&#xFF09;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B83;&#x7684;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#x4E3B;&#x8981;&#x662F;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x6570;&#x5B57;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;Plain Objects&#x3001;Array &#x7B49;&#xFF0C;&#x4EE5;&#x53CA;&#x5C11;&#x91CF;&#x7279;&#x6B8A;&#x5BF9;&#x8C61;&#x6BD4;&#x5982; Date&#x3001;RegExp&#x3001;Map&#x3001;Set &#x7B49;&#x7B49;&#xFF0C;&#x5BF9;&#x4E8E; Request&#x3001;Response &#x8FD9;&#x4E9B;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x88AB; IndexedDB &#x5B58;&#x50A8;&#x7684;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;Cache API &#x548C; IndexedDB &#x5728;&#x529F;&#x80FD;&#x4E0A;&#x662F;&#x4E92;&#x8865;&#x7684;&#x3002;&#x5728;&#x8BBE;&#x8BA1;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x7F13;&#x5B58;&#x65B9;&#x6848;&#x65F6;&#x901A;&#x5E38;&#x4EE5; Cache API &#x4E3A;&#x4E3B;&#xFF0C;&#x4F46;&#x5728;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684;&#x573A;&#x666F;&#x4E0B;&#xFF0C;Cache API &#x8FD9;&#x79CD;&#x8BF7;&#x6C42;&#x4E0E;&#x54CD;&#x5E94;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x5728;&#x7740;&#x5C40;&#x9650;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x7ED3;&#x5408;&#x4E0A;&#x529F;&#x80FD;&#x4E0A;&#x66F4;&#x4E3A;&#x7075;&#x6D3B;&#x7684; IndexedDB&#xFF0C;&#x901A;&#x8FC7; IndexedDB &#x5B58;&#x53D6;&#x4E00;&#x4E9B;&#x5173;&#x952E;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;&#xFF0C;&#x8F85;&#x52A9; Cache API &#x8FDB;&#x884C;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x3002;</p>
+<h2 id="&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a name="&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="plugin-anchor" href="#&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
+<p>&#x5728;&#x8FDB;&#x884C;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<h3 id="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;"><a name="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;" class="plugin-anchor" href="#&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x662F;&#x6709;&#x9650;&#x7684;</h3>
+<p>&#x4EFB;&#x4F55;&#x7F13;&#x5B58;&#x90FD;&#x662F;&#x6709;&#x5BB9;&#x91CF;&#x5927;&#x5C0F;&#x9650;&#x5236;&#x7684;&#xFF0C;Cache API &#x548C; IndexedDB &#x90FD;&#x4E0D;&#x4F8B;&#x5916;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5728;&#x5206;&#x914D;&#x7B56;&#x7565;&#x4E0A;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x4E0D;&#x540C;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x5206;&#x914D;&#x51FA;&#x4E00;&#x4E2A;&#x8F83;&#x5927;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x6765;&#x4F9B;&#x8FD9;&#x4E9B;&#x5B58;&#x50A8; API &#x4F7F;&#x7528;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x4E3B;&#x52A8;&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x8D44;&#x6E90;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5BB9;&#x91CF;&#x8F83;&#x5927;&#x4EE5;&#x81F3;&#x4E8E;&#x8D85;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x914D;&#x989D;&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x4FBF;&#x65E0;&#x6CD5;&#x5199;&#x5165;&#x8D44;&#x6E90;&#x5BFC;&#x81F4;&#x5B58;&#x50A8;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x8FD9;&#x65F6;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x91C7;&#x7528; LRU&#xFF08;Least Recently Used&#xFF09;&#x7B97;&#x6CD5;&#x6839;&#x636E;&#x6570;&#x636E;&#x7684;&#x5386;&#x53F2;&#x8BBF;&#x95EE;&#x8BB0;&#x5F55;&#x6765;&#x6DD8;&#x6C70;&#x6570;&#x636E;&#x4EE5;&#x6E05;&#x7406;&#x51FA;&#x53EF;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x4F46;&#x8FD9;&#x4E2A;&#x884C;&#x4E3A;&#x5C5E;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4E3B;&#x52A8;&#x884C;&#x4E3A;&#x4E0D;&#x53D7;&#x5F00;&#x53D1;&#x8005;&#x6240;&#x63A7;&#x5236;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD9;&#x90E8;&#x5206;&#x88AB;&#x6E05;&#x7406;&#x7684;&#x7F13;&#x5B58;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x5728;&#x8BBE;&#x8BA1;&#x7F13;&#x5B58;&#x65B9;&#x6848;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x505A;&#x597D;&#x7F13;&#x5B58;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x5931;&#x6548;&#x548C;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#xFF0C;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x88AB;&#x52A8;&#x89E6;&#x53D1;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x3002;&#x540C;&#x65F6;&#x4E3A;&#x4E86;&#x6EE1;&#x8DB3;&#x66F4;&#x52A0;&#x7CBE;&#x7EC6;&#x5316;&#x7684;&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x4E86; StorageEstimate API &#x53BB;&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x7F13;&#x5B58;&#x7A7A;&#x95F4;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x6765;&#x66F4;&#x597D;&#x5730;&#x7BA1;&#x7406;&#x7F13;&#x5B58;&#x8D44;&#x6E90;&#x3002;&#x5176;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-js">navigator.storage.estimate()
+  .then(estimate =&gt; {
+    <span class="hljs-comment">// &#x8BBE;&#x5907;&#x4E3A;&#x5F53;&#x524D;&#x57DF;&#x540D;&#x6240;&#x5206;&#x914D;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x603B;&#x5927;&#x5C0F;</span>
+    <span class="hljs-built_in">console</span>.log(estimate.quota)
+    <span class="hljs-comment">// &#x5F53;&#x524D;&#x57DF;&#x540D;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;</span>
+    <span class="hljs-built_in">console</span>.log(estimate.usage)
+  })
+</code></pre>
+<h3 id="&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;"><a name="&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;" class="anchor-navigation-ex-anchor" href="#&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;" class="plugin-anchor" href="#&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D44;&#x6E90;&#x7684;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;</h3>
+<p>&#x8D44;&#x6E90;&#x5728;&#x5199;&#x5165;&#x5B58;&#x50A8;&#x548C;&#x8BFB;&#x53D6;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x90FD;&#x5B58;&#x5728;&#x5931;&#x8D25;&#x7684;&#x53EF;&#x80FD;&#x3002;</p>
+<p>&#x5199;&#x5165;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x6BD4;&#x5982;&#x524D;&#x9762;&#x63D0;&#x5230;&#x7684;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x5927;&#x5C0F;&#x8D85;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x914D;&#x989D;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x9650;&#x5236;&#x5199;&#x5165;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x5728;&#x9690;&#x8EAB;&#x6A21;&#x5F0F;&#x6216;&#x8005;&#x662F;&#x7528;&#x6237;&#x672A;&#x6388;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E9B;&#x6D4F;&#x89C8;&#x5668;&#x540C;&#x6837;&#x4E0D;&#x5141;&#x8BB8;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x672C;&#x5730;&#x7684;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x662F;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x7528;&#x6237;&#x968F;&#x65F6;&#x53EF;&#x80FD;&#x5BF9;&#x8FD9;&#x4E9B;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x4FEE;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x8D44;&#x6E90;&#x6539;&#x6216;&#x5220;&#x9664;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7684;&#x60C5;&#x51B5;&#x6BD4;&#x8F83;&#x5C11;&#x89C1;&#xFF0C;&#x4F46;&#x662F;&#x6E05;&#x9664;&#x6570;&#x636E;&#x8FD8;&#x662F;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x8FDB;&#x884C;&#x6D4F;&#x89C8;&#x5668;&#x6570;&#x636E;&#x6E05;&#x7406;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x4E22;&#x5931;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5E94;&#x8BE5;&#x968F;&#x65F6;&#x505A;&#x597D;&#x5B58;&#x53D6;&#x5931;&#x8D25;&#x65F6;&#x7684;&#x5F02;&#x5E38;&#x6355;&#x83B7;&#x4E0E;&#x964D;&#x7EA7;&#x65B9;&#x6848;&#xFF0C;&#x786E;&#x4FDD;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#x4E0D;&#x4F1A;&#x51FA;&#x9519;&#x3002;</p>
+<h3 id="&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;"><a name="&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;" class="anchor-navigation-ex-anchor" href="#&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;" class="plugin-anchor" href="#&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x671F;</h3>
+<p>&#x5373;&#x4F7F;&#x5728;&#x5B58;&#x53D6;&#x8FC7;&#x7A0B;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x4EFB;&#x4F55;&#x610F;&#x5916;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x5B58;&#x50A8;&#x7684;&#x8D44;&#x6E90;&#x672C;&#x8EAB;&#x4E5F;&#x53EF;&#x80FD;&#x4F1A;&#x5B58;&#x5728;&#x8FC7;&#x671F;&#x5931;&#x6548;&#x7684;&#x95EE;&#x9898;&#x3002;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x5C31;&#x610F;&#x5473;&#x7740;&#x8D44;&#x6E90;&#x662F;&#x65E0;&#x7528;&#x751A;&#x81F3;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x4F1A;&#x5E26;&#x6765;&#x5404;&#x79CD;&#x610F;&#x60F3;&#x4E0D;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x6B64;&#x8981;&#x53CA;&#x65F6;&#x505A;&#x597D;&#x8D44;&#x6E90;&#x7684;&#x66F4;&#x65B0;&#x548C;&#x65E7;&#x8D44;&#x6E90;&#x7684;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h2 id="&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;"><a name="&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;" class="plugin-anchor" href="#&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F13;&#x5B58;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C06;&#x901A;&#x8FC7; CacheWrapper &#x6765;&#x7EDF;&#x4E00;&#x5B9E;&#x73B0;&#x7F13;&#x5B58;&#x7684;&#x7BA1;&#x7406;&#x3002;CacheWrapper &#x7684;&#x57FA;&#x672C;&#x601D;&#x8DEF;&#x662F;&#x5B9E;&#x73B0;&#x5BF9; Cache API &#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x5206;&#x522B;&#x5728;&#x6267;&#x884C; <code>cache.put()</code> &#x548C; <code>cache.match()</code> &#x7684;&#x65F6;&#x5019;&#x4F9D;&#x6B21;&#x5B8C;&#x6210;&#x5BF9;&#x7F13;&#x5B58;&#x5BF9;&#x8C61;&#x7684;&#x66F4;&#x65B0;&#x548C;&#x65E7;&#x8D44;&#x6E90;&#x7684;&#x6E05;&#x7406;&#x3002;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x4FE1;&#x606F;&#x5B58;&#x653E;&#x5728; IndexedDB &#x5F53;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5728;&#x7B2C;&#x4E09;&#x7AE0;&#x4E2D;&#x5C01;&#x88C5;&#x4E86; IndexedDB &#x7684; DB &#x7C7B;&#x6765;&#x7B80;&#x5316; IndexedDB &#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="&#x6784;&#x9020;&#x51FD;&#x6570;"><a name="&#x6784;&#x9020;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6784;&#x9020;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6784;&#x9020;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x6784;&#x9020;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6784;&#x9020;&#x51FD;&#x6570;</h3>
+<p>CacheWrapper &#x9700;&#x8981;&#x4F20;&#x5165;&#x4E24;&#x4E2A;&#x53C2;&#x6570; cacheName &#x548C; expireOptions&#x3002;&#x5176;&#x4E2D; cacheName &#x4E3A;&#x7F13;&#x5B58;&#x540D;&#x79F0;&#xFF0C;&#x7528;&#x4E8E;&#x83B7;&#x53D6; cache &#x5BF9;&#x8C61;&#x4EE5;&#x53CA;&#x5B9E;&#x4F8B;&#x5316; db&#x3002;expireOptions &#x4E3A;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EA;&#x6F14;&#x793A;&#x8D44;&#x6E90;&#x8D85;&#x65F6;&#x8FC7;&#x671F;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165; maxAgeSeconds &#x53C2;&#x6570;&#x89C4;&#x5B9A;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x957F;&#x5373;&#x53EF;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CacheWrapper</span> </span>{
+  <span class="hljs-keyword">constructor</span> ({
+    cacheName,
+    expireOptions: {
+      maxAgeSeconds
+    }
+  }) {
+    <span class="hljs-keyword">this</span>.cacheName = cacheName
+    <span class="hljs-keyword">this</span>.maxAgeSeconds = maxAgeSeconds
+  }
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x5B9E;&#x4F8B;&#x5316; CacheWrapper&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> cacheWrapper = <span class="hljs-keyword">new</span> CacheWrapper({
+  <span class="hljs-comment">// &#x7ED9;&#x7F13;&#x5B58;&#x8D77;&#x4E2A;&#x540D;</span>
+  cacheName: <span class="hljs-string">&apos;resource-cache&apos;</span>,
+  <span class="hljs-comment">// &#x5047;&#x8BBE;&#x7F13;&#x5B58; 1 &#x661F;&#x671F;&#x4E4B;&#x540E;&#x8D44;&#x6E90;&#x8FC7;&#x671F;</span>
+  expireOptions: {
+    maxAgeSeconds: <span class="hljs-number">7</span> * <span class="hljs-number">24</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span>
+  }
+})
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;-cache-&#x548C;-db-&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;"><a name="&#x83B7;&#x53D6;-cache-&#x548C;-db-&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;-cache-&#x548C;-db-&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;-cache-&#x548C;-db-&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;" class="plugin-anchor" href="#&#x83B7;&#x53D6;-cache-&#x548C;-db-&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6; cache &#x548C; db &#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x83B7;&#x53D6; cache &#x5BF9;&#x8C61;&#x548C; db &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7; this.cacheName &#x6307;&#x5B9A;&#x540D;&#x79F0;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#x5206;&#x522B;&#x83B7;&#x5F97;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CacheWrapper</span> </span>{
+  <span class="hljs-comment">// ...</span>
+
+  <span class="hljs-keyword">async</span> getCache () {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.cache) {
+      <span class="hljs-keyword">this</span>.cache = <span class="hljs-keyword">await</span> caches.open(<span class="hljs-keyword">this</span>.cacheName)
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.cache
+  }
+
+  getDB () {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.db) {
+      <span class="hljs-keyword">this</span>.db = <span class="hljs-keyword">new</span> DB({storeName: <span class="hljs-keyword">this</span>.cacheName})
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.db
+  }
+}
+</code></pre>
+<p>&#x6709;&#x4E86; getCache() &#x548C; getDB() &#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x7EED;&#x7684;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x5F53;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x5206;&#x522B;&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x7684; cache &#x548C; db &#x5BF9;&#x8C61;&#x4E86;&#x3002;</p>
+<h3 id="&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;"><a name="&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;" class="plugin-anchor" href="#&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5199;&#x5165;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</h3>
+<p>&#x5728;&#x8C03;&#x7528; cache.put() &#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x65B0;&#x589E;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x672C;&#x5730;&#x8D44;&#x6E90;&#xFF0C;&#x6B64;&#x65F6;&#x5E94;&#x8BE5;&#x540C;&#x6B65;&#x66F4;&#x65B0;&#x7F13;&#x5B58;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x3002;&#x7531;&#x4E8E;&#x4F20;&#x5165;&#x7684; maxAgeSeconds &#x5355;&#x4F4D;&#x662F;&#x79D2;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x8BA1;&#x7B97;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x65F6;&#x9700;&#x8981;&#x4E58;&#x4EE5; 1000 &#x6362;&#x7B97;&#x6210;&#x6BEB;&#x79D2;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CacheWrapper</span> </span>{
+  <span class="hljs-comment">// ...</span>
+
+  <span class="hljs-keyword">async</span> set (request, response) {
+    <span class="hljs-comment">// &#x83B7;&#x53D6; db &#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> db = <span class="hljs-keyword">this</span>.getDB()
+    <span class="hljs-comment">// &#x83B7;&#x53D6; cache &#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> cache = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.getCache()
+    <span class="hljs-comment">// &#x540C;&#x65F6;&#x66F4;&#x65B0;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E0E;&#x8D44;&#x6E90;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</span>
+    <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all([
+      cache.put(request, response),
+      db.setItem(request.url, <span class="hljs-built_in">Date</span>.now() + <span class="hljs-keyword">this</span>.maxAgeSeconds * <span class="hljs-number">1000</span>)
+    ])
+    <span class="hljs-comment">// &#x6E05;&#x7406;&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#xFF0C;&#x65E0;&#x9700;&#x963B;&#x585E;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;</span>
+    <span class="hljs-keyword">this</span>.deleteExpires()
+  }
+}
+</code></pre>
+<h3 id="&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;"><a name="&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;" class="plugin-anchor" href="#&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x65F6;&#x6392;&#x9664;&#x8FC7;&#x671F;&#x8D44;&#x6E90;</h3>
+<p>&#x5728;&#x8C03;&#x7528; cache.match() &#x65B9;&#x6CD5;&#x67E5;&#x8BE2;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x786E;&#x8BA4;&#x5BF9;&#x5E94;&#x8D44;&#x6E90;&#x662F;&#x5426;&#x8FC7;&#x671F;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x8D44;&#x6E90;&#x672A;&#x8FC7;&#x671F;&#x65F6;&#x518D;&#x5C06;&#x8D44;&#x6E90;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CacheWrapper</span> </span>{
+  <span class="hljs-comment">// ...</span>
+
+  <span class="hljs-keyword">async</span> get (request) {
+    <span class="hljs-comment">// &#x83B7;&#x53D6; db &#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> db = <span class="hljs-keyword">this</span>.getDB()
+    <span class="hljs-comment">// &#x83B7;&#x53D6; cache &#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> cache = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.getCache()
+    <span class="hljs-comment">// &#x540C;&#x65F6;&#x8BFB;&#x53D6;&#x8D44;&#x6E90;&#x53CA;&#x5176;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</span>
+    <span class="hljs-keyword">let</span> [response, expireTime] = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all([
+      cache.match(request),
+      db.getItem(request.url)
+    ])
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x672A;&#x8D85;&#x65F6;&#x5219;&#x4EE3;&#x8868;&#x8D44;&#x6E90;&#x6CA1;&#x8FC7;&#x671F;&#xFF0C;&#x5C06;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x8D44;&#x6E90;&#x8FD4;&#x56DE;</span>
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#x5219;&#x4E0D;&#x8FD4;&#x56DE;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;</span>
+    <span class="hljs-keyword">if</span> (expireTime &gt; <span class="hljs-built_in">Date</span>.now()) {
+      <span class="hljs-keyword">return</span> response
+    }
+    <span class="hljs-comment">// &#x6E05;&#x7406;&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#xFF0C;&#x65E0;&#x9700;&#x963B;&#x585E;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;</span>
+    <span class="hljs-keyword">this</span>.deleteExpires()
+  }
+}
+</code></pre>
+<h3 id="&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;"><a name="&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;" class="plugin-anchor" href="#&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;</h3>
+<p>&#x5728;&#x8C03;&#x7528; CacheWrapper &#x7684; <code>set()</code> &#x548C; <code>get()</code> &#x65B9;&#x6CD5;&#x7ED3;&#x675F;&#x524D;&#xFF0C;&#x90FD;&#x8C03;&#x7528;&#x4E86; <code>deleteExpires</code> &#x7EDF;&#x4E00;&#x8FDB;&#x884C;&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#xFF0C;&#x5176;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CacheWrapper</span> </span>{
+  <span class="hljs-comment">// ..</span>
+
+  <span class="hljs-keyword">async</span> deleteExpires () {
+    <span class="hljs-comment">// &#x83B7;&#x53D6; db &#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> db = <span class="hljs-keyword">this</span>.getDB()
+    <span class="hljs-comment">// &#x83B7;&#x53D6; cache &#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> cache = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.getCache()
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5168;&#x90E8;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x4FE1;&#x606F;</span>
+    <span class="hljs-keyword">let</span> map = <span class="hljs-keyword">await</span> db.getAll()
+    <span class="hljs-keyword">if</span> (!map) {
+      <span class="hljs-keyword">return</span>
+    }
+    <span class="hljs-keyword">let</span> now = <span class="hljs-built_in">Date</span>.now()
+    <span class="hljs-comment">// &#x904D;&#x5386;&#x6240;&#x6709;&#x8FC7;&#x671F;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x5BF9;&#x8FC7;&#x671F;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x6E05;&#x7406;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> [url, expireTime] <span class="hljs-keyword">of</span> map) {
+      <span class="hljs-keyword">if</span> (expireTime &lt;= now) {
+        <span class="hljs-keyword">await</span> cache.delete(url)
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="&#x5229;&#x7528;-cachewrapper-&#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;"><a name="&#x5229;&#x7528;-cachewrapper-&#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x5229;&#x7528;-cachewrapper-&#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5229;&#x7528;-cachewrapper-&#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x5229;&#x7528;-cachewrapper-&#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5229;&#x7528; CacheWrapper &#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;</h3>
+<p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528; CacheWrapper &#x5B9E;&#x73B0;&#x5BF9;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x7B80;&#x6613;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6240;&#x5C55;&#x793A;&#x7684;&#xFF0C;&#x7ED3;&#x5408; Router &#x5B9E;&#x73B0;&#x5BF9;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x671F;&#x6E05;&#x7406;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F18;&#x5148;&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x8BFB;&#x53D6;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#xFF0C;&#x5982;&#x679C;&#x8D44;&#x6E90;&#x5C1A;&#x672A;&#x88AB;&#x7F13;&#x5B58;&#x6216;&#x8005;&#x8D44;&#x6E90;&#x8FC7;&#x671F;&#xFF0C;&#x5219;&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x8D44;&#x6E90;&#x5E76;&#x7F13;&#x5B58;&#x5230;&#x672C;&#x5730;&#x3002;&#x5229;&#x7528; CacheWrapper &#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x5730;&#x5B9E;&#x73B0;&#x7F13;&#x5B58;&#x8FC7;&#x671F;&#x7BA1;&#x7406;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> router = <span class="hljs-keyword">new</span> Router()
+<span class="hljs-comment">// &#x5B9E;&#x4F8B;&#x5316; cacheWrapper &#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">const</span> cacheWrapper = <span class="hljs-keyword">new</span> CacheWrapper({
+  <span class="hljs-comment">// &#x5355;&#x72EC;&#x7ED9;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x5206;&#x914D;&#x7F13;&#x5B58;&#x540D;&#x79F0;</span>
+  cacheName: <span class="hljs-string">&apos;image-cache&apos;</span>,
+  expireOptions: {
+    <span class="hljs-comment">// &#x5BF9;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x7F13;&#x5B58; 1 &#x661F;&#x671F;</span>
+    maxAgeSeconds: <span class="hljs-number">7</span> * <span class="hljs-number">24</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span>
+  }
+})
+router.registerRoute(<span class="hljs-regexp">/\.(jpe?g|png)$/</span>, <span class="hljs-keyword">async</span> request =&gt; {
+  <span class="hljs-comment">// &#x4F18;&#x5148;&#x8BFB;&#x53D6;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x56FE;&#x7247;</span>
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x672C;&#x5730;&#x65E0;&#x7F13;&#x5B58;&#x56FE;&#x7247;/&#x7F13;&#x5B58;&#x8FC7;&#x671F;/&#x8BFB;&#x53D6;&#x7F13;&#x5B58;&#x51FA;&#x9519;&#xFF0C;&#x5219; response &#x4E3A;&#x7A7A;</span>
+  <span class="hljs-keyword">let</span> response = <span class="hljs-keyword">await</span> cacheWrapper.get(request).catch(() =&gt; {})
+  <span class="hljs-keyword">if</span> (response) {
+    <span class="hljs-keyword">return</span> response
+  }
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x672C;&#x5730;&#x5C1A;&#x672A;&#x7F13;&#x5B58;&#x6216;&#x8005;&#x7F13;&#x5B58;&#x8FC7;&#x671F;&#xFF0C;&#x5219;&#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x56FE;&#x7247;&#x8D44;&#x6E90;</span>
+  response = <span class="hljs-keyword">await</span> fetch(request.clone())
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x8BF7;&#x6C42;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x7F13;&#x5B58;</span>
+  <span class="hljs-comment">// &#x66F4;&#x65B0;&#x7F13;&#x5B58;&#x8FC7;&#x7A0B;&#x65E0;&#x9700;&#x963B;&#x585E;&#x8FDB;&#x7A0B;</span>
+  <span class="hljs-keyword">if</span> (response.ok) {
+    cacheWrapper.set(request, response.clone())
+  }
+  <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x8D44;&#x6E90;</span>
+  <span class="hljs-keyword">return</span> response
+})
+</code></pre>
+<p>&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x9664;&#x4E86;&#x4E0A;&#x9762;&#x6240;&#x6F14;&#x793A;&#x7684;&#x8FC7;&#x671F;&#x7BA1;&#x7406;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5BF9;&#x67D0;&#x4E00;&#x7C7B;&#x8D44;&#x6E90;&#x9650;&#x5236;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;&#x9650;&#x5236;&#x56FE;&#x7247;&#x6700;&#x591A;&#x7F13;&#x5B58; 10 &#x5F20;&#x7B49;&#x7B49;&#xFF0C;&#x8FD9;&#x4E9B;&#x7BA1;&#x7406;&#x65B9;&#x6848;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Cache API &#x4E0E; IndexedDB &#x76F8;&#x7ED3;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x4E00;&#x4E00;&#x505A;&#x6F14;&#x793A;&#x4E86;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x6839;&#x636E; CacheWrapper &#x7684;&#x601D;&#x8DEF;&#x8FDB;&#x884C;&#x76F8;&#x5173;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1-fetch-event-management.html" class="navigation navigation-prev " aria-label="Previous page: 1 资源请求的拦截代理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3-respond-strategy.html" class="navigation navigation-next " aria-label="Next page: 3 资源请求响应策略">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2 本地存储管理","level":"1.3.2","depth":2,"next":{"title":"3 资源请求响应策略","level":"1.3.3","depth":2,"path":"offlineAndCache/3-respond-strategy.md","ref":"offlineAndCache/3-respond-strategy.md","articles":[]},"previous":{"title":"1 资源请求的拦截代理","level":"1.3.1","depth":2,"path":"offlineAndCache/1-fetch-event-management.md","ref":"offlineAndCache/1-fetch-event-management.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/liuya6"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{},"github-buttons":{"buttons":[{"user":"liuya6","repo":"h5-sdk-has-pwa","size":"small"}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"harlan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"service-admin-doc","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"offlineAndCache/2-local-storage-management.md","mtime":"2022-05-05T08:08:47.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-12T09:45:24.000Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

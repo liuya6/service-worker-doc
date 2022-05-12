@@ -1,0 +1,59 @@
+{
+  "title": "service-admin-doc",
+  "author": "harlan",
+  "description": "select * from learn",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "structure": {
+    "readme": "README.md"
+  },
+  "plugins": [
+    "-sharing",
+    "splitter",
+    "expandable-chapters-small",
+    "anchors",
+    "github",
+    "github-buttons",
+    "sharing-plus",
+    "anchor-navigation-ex",
+    "favicon"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/liuya6"
+    },
+    "github-buttons": {
+      "buttons": [{
+        "user": "liuya6",
+        "repo": "h5-sdk-has-pwa",
+        "size": "small"
+      }]
+    },
+    "sharing": {
+      "douban": false,
+      "facebook": false,
+      "google": false,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": false,
+      "linkedin": false,
+      "messenger": false,
+      "pocket": false,
+      "qq": false,
+      "qzone": false,
+      "stumbleupon": false,
+      "twitter": false,
+      "viber": false,
+      "vk": false,
+      "weibo": false,
+      "whatsapp": false,
+      "all": [
+        "google", "facebook", "weibo", "twitter",
+        "qq", "qzone", "pocket"
+      ]
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    }
+  }
+}
