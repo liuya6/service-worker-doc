@@ -4,7 +4,7 @@
 
 ### 引入方式
 
-1. 通过importScripts()方法从谷歌官方CDN中引入。
+* 通过importScripts()方法从谷歌官方CDN中引入。
 
 ```javascript
 importScripts('https://cdn.bootcdn.net/ajax/libs/workbox-sw/6.5.3/workbox-sw.min.js');
@@ -16,7 +16,7 @@ if (workbox) {
 
 ```
 
-2. 本地引入，本地需要从npm库中下载相应的workbox包，然后通过import按需导入。
+* 本地引入，本地需要从npm库中下载相应的workbox包，然后通过import按需导入。
 
 ```javascript
 import {precaching} from 'workbox-precaching';
@@ -135,7 +135,7 @@ registerRoute(  /\.(?:png|jpg|jpeg|svg|gif)$/,  new CacheFirst({
 
 Workbox内部封装了以下五种缓存策略：
 
-* NetworkFirst：网络优先
+* 1、NetworkFirst：网络优先
   这种策略就是当请求路由是被匹配的，就采用网络优先的策略，也就是优先尝试拿到网络请求的返回结果，如果拿到网络请求的结果，就将结果返回给客户端并且写入 Cache 缓存，如果网络请求失败，那最后被缓存的 Cache 缓存结果就会被返回到客户端，这种策略一般适用于返回结果不太固定或对实时性有要求的请求，为网络请求失败进行兜底。可以像如下方式使用 Network First 策略：
 
 ```javascript
@@ -145,7 +145,7 @@ workbox.routing.registerRoute(
 );
 ```
 
-* CacheFirst：缓存优先
+* 2、CacheFirst：缓存优先
   这个策略的意思就是当匹配到请求之后直接从 Cache 缓存中取得结果，如果 Cache 缓存中没有结果，那就会发起网络请求，拿到网络请求结果并将结果更新至 Cache 缓存，并将结果返回给客户端。这种策略比较适合结果不怎么变动且对实时性要求不高的请求。可以像如下方式使用 Cache First 策略：
 
 ```javascript
@@ -155,7 +155,7 @@ workbox.routing.registerRoute(
 );
 ```
 
-* NetworkOnly：仅使用正常的网络请求
+* 3、NetworkOnly：仅使用正常的网络请求
   比较直接的策略，直接强制使用正常的网络请求，并将结果返回给客户端，这种策略比较适合对实时性要求非常高的请求。可以像如下方式使用 Network Only 策略：
 
 ```javascript
@@ -165,7 +165,7 @@ workbox.routing.registerRoute(
 );
 ```
 
-* CacheOnly：仅使用缓存中的资源
+* 4、CacheOnly：仅使用缓存中的资源
   这个策略也比较直接，直接使用 Cache 缓存的结果，并将结果返回给客户端，这种策略比较适合一上线就不会变的静态资源请求。可以像如下方式使用 Cache Only 策略：
 
 ```javascript
@@ -176,7 +176,7 @@ workbox.routing.registerRoute(
 
 ```
 
-* StaleWhileRevalidate：从缓存中读取资源的同时发送网络请求更新本地缓存
+* 5、StaleWhileRevalidate：从缓存中读取资源的同时发送网络请求更新本地缓存
   这种策略的意思是当请求的路由有对应的 Cache 缓存结果就直接返回，在返回 Cache 缓存结果的同时会在后台发起网络请求拿到请求结果并更新 Cache 缓存，如果本来就没有 Cache 缓存的话，直接就发起网络请求并返回结果，这对用户来说是一种非常安全的策略，能保证用户最快速的拿到请求的结果，但是也有一定的缺点，就是还是会有网络请求占用了用户的网络带宽。可以像如下的方式使用 State While Revalidate 策略：
 
 ```javascript
@@ -235,5 +235,30 @@ workbox.routing.registerRoute(
     }
   })
 )
+
+```
+
+
+### 删除缓存
+
+* 删除过期缓存
+  每次进入页面，都需要删除掉已经过期的缓存，以免用户看到的还是旧的数据。
+
+```javascript
+  workbox.precaching.cleanupOutdatedCaches();
+
+```
+
+* 删除所有缓存
+  删除所有缓存，直接使用cache,客户端自带的属性。
+
+```javascript
+caches.keys().then(function (cacheList) {
+    return Promise.all(
+      cacheList.map(function (cacheName) {
+        return caches.delete(cacheName);
+      })
+    );
+});
 
 ```
