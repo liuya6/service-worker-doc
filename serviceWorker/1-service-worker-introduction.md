@@ -120,11 +120,11 @@ Service Worker **可以拦截并代理请求，可以处理请求的返回内容
 
 ## 浏览器支持程度
 
-由于 W3C 标准或草案的提出之后各大浏览器的实现步伐是不一样的，参考 [Can I Use](https://caniuse.com) 截止 2019-04-02 的数据，如下图所示当前各大浏览器对 Service Worker 的支持情况如下。
+由于 W3C 标准或草案的提出之后各大浏览器的实现步伐是不一样的，参考 [Can I Use](https://caniuse.com) 截止 2022-05-13 的数据，如下图所示当前各大浏览器对 Service Worker 的支持情况如下。
 
 ![caniuse.com 给出的 Service Worker 浏览器支持情况](./img/service_worker_support.png)
 
-从上图可以看出，Service Worker 的支持程度已经达到 `89.84%`。其中 Chrome 作为开路先锋早早的在 V40 版本就已经支持 Service Worker，并在 Devtools 中还提供了完善的 Debug 方案，Apple 方面从 MacOS Safari 11.1 和 iOS Safari 11.3 开始全面支持，IE Edge 从 17 版本开始也全面支持。
+从上图可以看出，Service Worker 的支持程度已经达到 `90%`左右。其中 Chrome 作为开路先锋早早的在 V40 版本就已经支持 Service Worker，并在 Devtools 中还提供了完善的 Debug 方案，Apple 方面从 MacOS Safari 11.1 和 iOS Safari 11.3 开始全面支持，IE Edge 从 17 版本开始也全面支持。
 
 目前 Apple 和微软都已经支持了 Service Worker，所以对于 “离线可访问” 这样的 PWA 特性来讲，几乎可以在任何的现代浏览器中被实现。
 

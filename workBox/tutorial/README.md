@@ -90,7 +90,7 @@ workbox.setConfig({debug: false}); // 默认展示日志log,此设置log全部�
 ```javascript
 workbox.routing.registerRoute(
     /\.(?:png|gif|jpg|jpeg|svg)$/,
-    workbox.strategies.cacheFirst({
+    new workbox.strategies.cacheFirst({
         cacheName: 'images',
         plugins: [
             new workbox.ExpirationPlugin({
@@ -141,7 +141,7 @@ Workbox内部封装了以下五种缓存策略：
 ```javascript
 workbox.routing.registerRoute(
     match, // 匹配的路由
-    workbox.strategies.NetworkFirst()
+    new workbox.strategies.NetworkFirst()
 );
 ```
 
@@ -151,7 +151,7 @@ workbox.routing.registerRoute(
 ```javascript
 workbox.routing.registerRoute(
     match, // 匹配的路由
-    workbox.strategies.CacheFirst()
+    new workbox.strategies.CacheFirst()
 );
 ```
 
@@ -160,8 +160,8 @@ workbox.routing.registerRoute(
 
 ```javascript
 workbox.routing.registerRoute(
-        match, // 匹配的路由
-        workbox.strategies.NetworkOnly()
+    match, // 匹配的路由
+    new workbox.strategies.NetworkOnly()
 );
 ```
 
@@ -171,7 +171,7 @@ workbox.routing.registerRoute(
 ```javascript
 workbox.routing.registerRoute(
     match, // 匹配的路由
-    workbox.strategies.CacheOnly()
+    new workbox.strategies.CacheOnly()
 );
 
 ```
@@ -182,7 +182,7 @@ workbox.routing.registerRoute(
 ```javascript
 workbox.routing.registerRoute(
     match, // 匹配的路由
-    workbox.strategies.StaleWhileRevalidate()
+    new workbox.strategies.StaleWhileRevalidate()
 );
 ```
 
@@ -216,8 +216,8 @@ workbox.routing.registerRoute(
 当然，并不是所有的策略在第三方请求上都不能使用，workbox 可以允许 networkFirst 和 stalteWhileRevalidate 缓存策略生效，因为这些策略会有规律的更新缓存的返回内容，毕竟每次请求后都会更新缓存内容，要比直接缓存安全的多。<br>
 ```javascript
 workbox.routing.registerRoute(
-    'https://notzoumiaojiang.com/example-script.min.js',
-    workbox.strategies.NetworkFirst(),
+    'https://notzoumiaojiang.com/example-script.min.js', 
+    new workbox.strategies.NetworkFirst(),
 );
 ```
 
